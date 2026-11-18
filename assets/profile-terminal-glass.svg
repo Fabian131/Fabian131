@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 374" width="100%" role="img" aria-label="Fabián Sánchez Salinas — Liquid Glass Terminal Profile YAML">
+  <defs>
+    <filter id="ptBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34" />
+    </filter>
+    <linearGradient id="ptBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="50%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#060916" />
+    </linearGradient>
+    <linearGradient id="ptGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    <linearGradient id="ptSheen" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14" />
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.03" />
+      <stop offset="36%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="ptRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.52" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.24" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.52" />
+    </linearGradient>
+    <linearGradient id="ptHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.11" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+    <pattern id="ptGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.9" fill="#94a3b8" fill-opacity="0.14" />
+    </pattern>
+    <clipPath id="ptClip">
+      <rect x="18" y="16" width="844" height="342" rx="20" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
+    .k { fill: #38bdf8; font-weight: 700; }
+    .c { fill: #64748b; }
+    .v { fill: #f1f5f9; }
+    .g { fill: #34d399; }
+    .p { fill: #c084fc; }
+    .y { fill: #fde047; font-weight: 600; }
+    .cursor { animation: blink 1.05s steps(2, start) infinite; }
+    .orbA { animation: driftA 10s ease-in-out infinite alternate; }
+    .orbB { animation: driftB 12s ease-in-out infinite alternate; }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes driftA {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(26px, -14px) scale(1.08); }
+    }
+    @keyframes driftB {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(-24px, 16px) scale(1.08); }
+    }
+  </style>
+
+  <!-- Base Dark Canvas -->
+  <rect width="880" height="374" rx="24" fill="url(#ptBg)" />
+  <rect width="880" height="374" rx="24" fill="url(#ptGrid)" />
+
+  <!-- Liquid Glass Ambient Orbs -->
+  <g filter="url(#ptBlur)">
+    <circle class="orbA" cx="170" cy="110" r="105" fill="#06b6d4" opacity="0.42" />
+    <circle class="orbB" cx="705" cy="260" r="115" fill="#a855f7" opacity="0.38" />
+    <ellipse cx="450" cy="310" rx="140" ry="50" fill="#10b981" opacity="0.22" />
+  </g>
+
+  <!-- Main Liquid Glass Terminal Container -->
+  <g clip-path="url(#ptClip)">
+    <rect x="18" y="16" width="844" height="342" rx="20" fill="url(#ptGlass)" />
+    <rect x="18" y="16" width="844" height="342" rx="20" fill="url(#ptSheen)" />
+    <rect x="18" y="16" width="844" height="38" fill="url(#ptHeader)" />
+    <line x1="18" y1="54" x2="862" y2="54" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+    <path d="M 42 17 L 838 17" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.2" />
+  </g>
+  <rect x="18" y="16" width="844" height="342" rx="20" fill="none" stroke="url(#ptRim)" stroke-width="1.5" />
+
+  <!-- macOS Chrome & Terminal Path -->
+  <circle cx="42" cy="35" r="5.5" fill="#ff5f56" />
+  <circle cx="61" cy="35" r="5.5" fill="#ffbd2e" />
+  <circle cx="80" cy="35" r="5.5" fill="#27c93f" />
+  <text x="104" y="39" class="mono" font-size="12" fill="#cbd5e1">
+    fabian131@una-sarapiqui:~$ cat ./profile.yml
+  </text>
+
+  <!-- YAML Badge Pill -->
+  <rect x="742" y="23" width="102" height="23" rx="11.5" fill="#0f172a" fill-opacity="0.58" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1" />
+  <text x="793" y="38.5" text-anchor="middle" class="mono" font-size="10.5" font-weight="700" fill="#7dd3fc">
+    profile.yml
+  </text>
+
+  <!-- Terminal YAML Body -->
+  <g class="mono" font-size="12.4">
+    <text x="42" y="84"><tspan class="k">engineer</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="v">&quot;Fabián Sánchez Salinas (aka xxTYBUxx)&quot;</tspan></text>
+    <text x="42" y="107"><tspan class="k">origin</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="g">&quot;Costa Rica · Región Huetar Norte y Caribe&quot;</tspan></text>
+    <text x="42" y="130"><tspan class="k">university</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="v">&quot;Universidad Nacional (UNA) — Campus Sarapiquí&quot;</tspan></text>
+    <text x="42" y="153"><tspan class="k">education</tspan><tspan x="166" class="c">:</tspan></text>
+    <text x="64" y="175"><tspan class="p">-</tspan><tspan x="80" class="v">&quot;B.Sc. Information Systems Engineering (4th Year · 2021–Present)&quot;</tspan></text>
+    <text x="64" y="197"><tspan class="p">-</tspan><tspan x="80" class="v">&quot;Diploma in Computer Applications Programming (Graduating Nov 2026)&quot;</tspan></text>
+    <text x="42" y="220"><tspan class="k">leadership</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="v">&quot;First-Year Information Systems Academic Mentor @ UNA&quot;</tspan></text>
+    <text x="42" y="243"><tspan class="k">specialty</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="g">&quot;Backend Architecture · RESTful APIs · Microservices&quot;</tspan></text>
+    <text x="42" y="266"><tspan class="k">frontend_split</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="v">&quot;Web (React/Next/Blade/Tailwind) · Mobile (Kotlin/RN Expo)&quot;</tspan></text>
+    <text x="42" y="289"><tspan class="k">engineering</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="p">&quot;SOLID · DRY · Clean/Hexagonal/Service Layer/MVC/MVVM&quot;</tspan></text>
+    <text x="42" y="312"><tspan class="k">quality</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="g">&quot;126+ PRs (121 merged) · 33+ Code Reviews · English-First&quot;</tspan></text>
+    <text x="42" y="335"><tspan class="k">philosophy</tspan><tspan x="166" class="c">:</tspan><tspan x="184" class="y">&quot;CONCEPTS &gt; CODE — solid foundations before frameworks.&quot;</tspan><tspan class="cursor" fill="#38bdf8"> █</tspan></text>
+  </g>
+</svg>

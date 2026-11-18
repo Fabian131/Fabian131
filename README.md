@@ -6,16 +6,21 @@
 <br /><br />
 
 <!-- Quick Connect Bar -->
-<a href="https://portafolio-fabian-sanchez-salinas.netlify.app/">
-  <img src="https://img.shields.io/badge/Portfolio-3D%20%26%20Glass-06b6d4?style=for-the-badge&logo=netlify&logoColor=white&labelColor=0f172a" alt="Portfolio" />
+<a href="https://portafolio-fabian-sanchez-salinas.vercel.app/">
+  <img src="https://img.shields.io/badge/Portfolio-3D%20%26%20Glass-06b6d4?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0f172a" alt="Portfolio" />
 </a>
 <a href="https://www.linkedin.com/in/fabian-sanchez-salinas-270862361/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-38bdf8?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0f172a" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-38bdf8?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xOSAzYTIgMiAwIDAgMSAyIDJ2MTRhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWNWEyIDIgMCAwIDEgMi0yaDE0bS0uNSAxNS41di01LjNhMy4yNiAzLjI2IDAgMCAwLTMuMjYtMy4yNmMtLjg1IDAtMS44NC41Mi0yLjI4IDEuM3YtMS4xMWgtMi43OXY4LjM3aDIuNzl2LTQuOTNjMC0uNzcuNjItMS40IDEuMzktMS40YTEuNCAxLjQgMCAwIDEgMS40IDEuNHY0LjkzaDIuNzVNNi44OCA4LjU2YTEuNjggMS42OCAwIDAgMCAxLjY4LTEuNjhjMC0uOTMtLjc1LTEuNjktMS42OC0xLjY5YTEuNjkgMS42OSAwIDAgMC0xLjY5IDEuNjljMCAuOTMuNzYgMS42OCAxLjY5IDEuNjhtMS4zOSA5Ljk0di04LjM3SDUuNXY4LjM3aDIuNzd6Ii8%2BPC9zdmc%2B&labelColor=0f172a" alt="LinkedIn" />
 </a>
 <a href="mailto:fabian.sanchez.salinas@est.una.ac.cr">
   <img src="https://img.shields.io/badge/Email-UNA%20CR-a855f7?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0f172a" alt="Email" />
 </a>
-<img src="https://img.shields.io/badge/UNA%20Sarapiquí-Costa%20Rica-d22027?style=for-the-badge&logo=academia&logoColor=white&labelColor=0f172a" alt="UNA Campus Sarapiquí Costa Rica" />
+<a href="https://www.srhnc.una.ac.cr/">
+  <img src="https://img.shields.io/badge/UNA-Campus%20Sarapiqu%C3%AD-d22027?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAzTDEgOWw0IDIuMTh2NkwxMiAyMWw3LTMuODJ2LTZsMi0xLjA5VjE3aDJWOUwxMiAzem02LjgyIDZMMTIgMTIuNzIgNS4xOCA5IDEyIDUuMjggMTguODIgOXpNMTcgMTUuOTlsLTUgMi43My01LTIuNzN2LTMuNzJMMTIgMTVsNS0yLjczdjMuNzJ6Ii8%2BPC9zdmc%2B&labelColor=0f172a" alt="UNA Campus Sarapiquí" />
+</a>
+<a href="https://maps.app.goo.gl/YPVQE7EGz2ReJgMfA">
+  <img src="https://img.shields.io/badge/Costa%20Rica-Sarapiqu%C3%AD-0284c7?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAxNiI%2BPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjE2IiByeD0iMiIgZmlsbD0iIzAwMkI3RiIvPjxyZWN0IHk9IjIuNyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjEwLjYiIGZpbGw9IiNGRkZGRkYiLz48cmVjdCB5PSI1LjMiIHdpZHRoPSIyNCIgaGVpZ2h0PSI1LjQiIGZpbGw9IiNDRTExMjYiLz48L3N2Zz4%3D&labelColor=0f172a" alt="Costa Rica Location" />
+</a>
 
 </div>
 
@@ -30,24 +35,9 @@
 
 ### `>_` Terminal Engineering Profile & Academic Journey
 
-```yaml
-┌───────────────────────────────────────────────────────────────────────────────┐
-│ fabian131@una-sarapiqui:~$ cat ./profile.yml                                  │
-├───────────────────────────────────────────────────────────────────────────────┤
-│ engineer      : "Fabián Sánchez Salinas (aka xxTYBUxx)"                       │
-│ origin        : "Costa Rica · Región Huetar Norte y Caribe"                   │
-│ university    : "Universidad Nacional (UNA) — Campus Sarapiquí"               │
-│ education     :                                                               │
-│   - "B.Sc. Information Systems Engineering (4th Year · 2021–Present)"         │
-│   - "Diploma in Computer Applications Programming (Graduating Nov 2026)"      │
-│ leadership    : "First-Year Information Systems Academic Mentor @ UNA"        │
-│ specialty     : "Backend Architecture · RESTful APIs · Microservices"         │
-│ frontend_split: "Web (React/Next/Blade/Tailwind) · Mobile (Kotlin/RN Expo)"   │
-│ engineering   : "SOLID · DRY · Clean/Hexagonal/Service Layer/MVC/MVVM"        │
-│ quality       : "126+ PRs (121 merged) · 33+ Code Reviews · English-First"    │
-│ philosophy    : "CONCEPTS > CODE — solid foundations before frameworks."      │
-└───────────────────────────────────────────────────────────────────────────────┘
-```
+<div align="center">
+  <img src="./assets/profile-terminal-glass.svg" width="100%" alt="Fabian131 Liquid Glass Terminal Engineering Profile" />
+</div>
 
 ---
 
@@ -144,7 +134,7 @@
 
 | Year | Project | Stack &amp; Architecture | Repositories |
 | :--- | :--- | :--- | :--- |
-| **2026** | **Personal 3D Portfolio** | **Frontend Web:** React 19, Vite 8, Tailwind CSS 4, **Three.js 0.183** GPU particle shaders (`onBeforeCompile`), Framer Motion 13, GSAP 3.15, Atomic Design, ES/EN i18n, EmailJS, adaptive performance tiers. | [`Portafolio-Fabian-Sanchez`](https://github.com/Fabian131/Portafolio-Fabian-Sanchez) · [`Live Site`](https://portafolio-fabian-sanchez-salinas.netlify.app/) |
+| **2026** | **Personal 3D Portfolio** | **Frontend Web:** React 19, Vite 8, Tailwind CSS 4, **Three.js 0.183** GPU particle shaders (`onBeforeCompile`), Framer Motion 13, GSAP 3.15, Atomic Design, ES/EN i18n, EmailJS, adaptive performance tiers. | [`Portafolio-Fabian-Sanchez`](https://github.com/Fabian131/Portafolio-Fabian-Sanchez) · [`Live Site`](https://portafolio-fabian-sanchez-salinas.vercel.app/) |
 | **2026** | **Raíces — Rural Tourism Portal** | **Full-Stack Web:** Laravel 13, PHP 8.4+, Blade, Tailwind CSS 4, MySQL, Fortify auth, Leaflet (Esri World Imagery) + SNIT Costa Rica geolocation recommendations, Docker/Vercel. | [`turismo-rural-una`](https://github.com/DilanRC/turismo-rural-una) · [`Rural-Tourism-Portal`](https://github.com/Fabian131/Rural-Tourism-Portal) *(Private)* |
 | **2026** | **AI Facial Recognition &amp; Access Control** | **UNA EIF-4200:** Python, `face_recognition` embeddings cache, `cryptography.Fernet` encrypted employee PII (`VARBINARY`), MySQL access audit logs, intrusion alerts. | [`IA-Sistema-de-reconocimiento-facial`](https://github.com/LuisRV5/IA-Sistema-de-reconocimiento-facial) *(Private)* |
 | **2026** | **AI NLP Sentiment &amp; Sarcasm Analyzer** | **UNA EIF-4200 (Campus Sarapiquí):** Python, Transformers **BERT** (`nlptown/bert-base-multilingual-uncased-sentiment`), batch `.csv`/`.xlsx` ingestion, Spanish sarcasm &amp; negation inversion. | [`feedback-and-feelings-analysis`](https://github.com/LuisRV5/feedback-and-feelings-analysis) *(Private)* |
