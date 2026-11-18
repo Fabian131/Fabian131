@@ -11,6 +11,10 @@ on:
       - "scripts/generate_stats.py"
       - ".github/workflows/update-stats.yml"
 
+concurrency:
+  group: repo-write-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -20,21 +24,39 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check PROFILE_TOKEN
+        id: token_check
+        env:
+          HAS_PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN != '' }}
+        run: |
+          if [ "$HAS_PROFILE_TOKEN" = "true" ]; then
+            echo "has_pat=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_pat=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::PROFILE_TOKEN secret is not set; skipping telemetry overwrite to preserve full private+public stats."
+          fi
+
       - name: Set up Python
+        if: steps.token_check.outputs.has_pat == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Generate Live Telemetry SVG
+        if: steps.token_check.outputs.has_pat == 'true'
         run: python3 scripts/generate_stats.py
         env:
-          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
 
       - name: Commit & Push if changed
+        if: steps.token_check.outputs.has_pat == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/telemetry-glass.svg
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(stats): sync live telemetry svg" && git push)
-
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore(stats): sync live telemetry svg"
+            git pull --rebase origin main
+            git push
+          fi
