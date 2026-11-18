@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 270" width="100%" role="img" aria-label="Fabián Sánchez Salinas — Terminal Liquid Glass Hero">
+  <defs>
+    <!-- Ambient Liquid Blobs Blur -->
+    <filter id="liquidBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34" />
+    </filter>
+
+    <!-- Subtle Glow for Neon Accents -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Background Mesh Gradient -->
+    <linearGradient id="bgCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="50%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#070b18" />
+    </linearGradient>
+
+    <!-- Animated Liquid Glass Orbs -->
+    <linearGradient id="orbCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4">
+        <animate attributeName="stop-color" values="#06b6d4;#3b82f6;#22d3ee;#06b6d4" dur="12s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="orbViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#ec4899;#6366f1;#a855f7" dur="14s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <linearGradient id="orbEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Liquid Glass Panel Fill & Specular Edge -->
+    <linearGradient id="glassSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.13" />
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <linearGradient id="glassRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.48" />
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.28" />
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.12" />
+    </linearGradient>
+
+    <linearGradient id="headerBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.11" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+
+    <linearGradient id="pixelFrameBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.72" />
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.58" />
+    </linearGradient>
+
+    <!-- Subtle Dot Grid Pattern -->
+    <pattern id="cyberGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.9" fill="#94a3b8" fill-opacity="0.14" />
+    </pattern>
+
+    <clipPath id="cardClip">
+      <rect x="20" y="18" width="840" height="234" rx="20" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .orb-1 { animation: driftA 9s ease-in-out infinite alternate; }
+    .orb-2 { animation: driftB 11s ease-in-out infinite alternate; }
+    .orb-3 { animation: driftC 8s ease-in-out infinite alternate; }
+    .cursor { animation: blink 1.05s steps(2, start) infinite; }
+    .steam-1 { animation: steamUp 2.6s ease-in-out infinite; }
+    .steam-2 { animation: steamUp 2.6s ease-in-out 0.9s infinite; }
+    .pulse-dot { animation: pulse 2.2s ease-in-out infinite; }
+    .sparkle { animation: twinkle 3s ease-in-out infinite alternate; }
+
+    @keyframes driftA {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(32px, -18px) scale(1.1); }
+    }
+    @keyframes driftB {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(-28px, 16px) scale(1.08); }
+    }
+    @keyframes driftC {
+      0% { transform: translate(0px, 0px) scale(0.95); }
+      100% { transform: translate(18px, 14px) scale(1.08); }
+    }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes steamUp {
+      0% { transform: translateY(0px); opacity: 0.85; }
+      100% { transform: translateY(-10px); opacity: 0; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+  </style>
+
+  <!-- Outer Dark Base -->
+  <rect width="880" height="270" rx="24" fill="url(#bgCanvas)" />
+  <rect width="880" height="270" rx="24" fill="url(#cyberGrid)" />
+
+  <!-- Liquid Glass Blurred Ambient Orbs -->
+  <g filter="url(#liquidBlur)">
+    <circle class="orb-1" cx="155" cy="90" r="95" fill="url(#orbCyan)" opacity="0.58" />
+    <circle class="orb-2" cx="695" cy="185" r="105" fill="url(#orbViolet)" opacity="0.52" />
+    <ellipse class="orb-3" cx="445" cy="225" rx="140" ry="55" fill="url(#orbEmerald)" opacity="0.34" />
+  </g>
+
+  <!-- Main Liquid Glass Terminal Container -->
+  <g clip-path="url(#cardClip)">
+    <rect x="20" y="18" width="840" height="234" rx="20" fill="url(#glassSurface)" />
+    <!-- Top Terminal Bar -->
+    <rect x="20" y="18" width="840" height="38" fill="url(#headerBar)" />
+    <line x1="20" y1="56" x2="860" y2="56" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+    <!-- Top Specular Liquid Highlight -->
+    <path d="M 40 19 L 840 19" stroke="#ffffff" stroke-opacity="0.45" stroke-width="1.2" />
+  </g>
+  <rect x="20" y="18" width="840" height="234" rx="20" fill="none" stroke="url(#glassRim)" stroke-width="1.5" />
+
+  <!-- macOS Traffic Lights + Terminal Title -->
+  <circle cx="44" cy="37" r="5.5" fill="#ff5f56" />
+  <circle cx="63" cy="37" r="5.5" fill="#ffbd2e" />
+  <circle cx="82" cy="37" r="5.5" fill="#27c93f" />
+
+  <text x="106" y="41" class="mono" font-size="12" fill="#cbd5e1" fill-opacity="0.88">
+    fabian131@una-cr — zsh — ~/architecture
+  </text>
+
+  <!-- Status Pill on Top-Right -->
+  <rect x="646" y="25" width="196" height="24" rx="12" fill="#0f172a" fill-opacity="0.55" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1" />
+  <circle class="pulse-dot" cx="661" cy="37" r="3.5" fill="#22c55e" />
+  <text x="672" y="41" class="mono" font-size="10.2" font-weight="600" fill="#e2e8f0">
+    UNA SARAPIQUÍ · COSTA RICA
+  </text>
+
+  <!-- Left Terminal Content -->
+  <text x="44" y="88" class="mono" font-size="13" fill="#38bdf8" font-weight="700">$ whoami</text>
+  <text x="118" y="88" class="mono" font-size="12.5" fill="#94a3b8">--alias xxTYBUxx · Campus Sarapiquí</text>
+
+  <text x="44" y="122" class="sans" font-size="27" font-weight="800" fill="#f8fafc" letter-spacing="-0.4">
+    Fabián Sánchez Salinas
+  </text>
+
+  <text x="44" y="148" class="sans" font-size="13.8" font-weight="500" fill="#bae6fd">
+    Backend-Focused Full-Stack Engineer · UNA Academic Mentor
+  </text>
+
+  <!-- Terminal Key-Value Block -->
+  <text x="44" y="178" class="mono" font-size="12.2" fill="#c084fc">$ cat</text>
+  <text x="86" y="178" class="mono" font-size="12.2" fill="#e2e8f0">./engineering_manifest.env</text>
+
+  <text x="44" y="200" class="mono" font-size="11.8" fill="#94a3b8">
+    <tspan fill="#34d399">ARCH</tspan>=&quot;Clean · Hexagonal · Service Layer · MVC · MVVM · Microservices&quot;
+  </text>
+  <text x="44" y="219" class="mono" font-size="11.8" fill="#94a3b8">
+    <tspan fill="#38bdf8">TECH</tspan>=&quot;Java/Spring · PHP/Laravel · .NET 8 · FastAPI · Kotlin · React/TS&quot;
+  </text>
+
+  <!-- Blinking Terminal Cursor -->
+  <text x="44" y="241" class="mono" font-size="12" fill="#22d3ee">
+    fabian131:~$ <tspan class="cursor" fill="#38bdf8">█</tspan>
+  </text>
+
+  <!-- Right Pixel Art Mini-Glass Window -->
+  <rect x="668" y="72" width="170" height="162" rx="16" fill="url(#pixelFrameBg)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1.2" />
+  <text x="753" y="92" text-anchor="middle" class="mono" font-size="10" fill="#7dd3fc" letter-spacing="1.2">
+    PIXEL.DEV_UNIT
+  </text>
+
+  <!-- Crisp Pixel Art Developer + Monitor + Coffee (4px grid) -->
+  <g transform="translate(697, 102)" shape-rendering="crispEdges">
+    <!-- Floating Pixel Sparkles -->
+    <rect class="sparkle" x="4" y="8" width="4" height="4" fill="#38bdf8" />
+    <rect class="sparkle" x="104" y="4" width="4" height="4" fill="#c084fc" />
+    <rect class="sparkle" x="98" y="24" width="4" height="4" fill="#34d399" />
+
+    <!-- Retro Pixel Monitor -->
+    <rect x="16" y="8" width="68" height="48" fill="#334155" />
+    <rect x="20" y="12" width="60" height="40" fill="#0f172a" />
+    <!-- Monitor Inner Glowing Code Lines -->
+    <rect x="26" y="18" width="20" height="4" fill="#38bdf8" />
+    <rect x="50" y="18" width="12" height="4" fill="#c084fc" />
+    <rect x="26" y="26" width="32" height="4" fill="#34d399" />
+    <rect x="26" y="34" width="16" height="4" fill="#f472b6" />
+    <rect x="46" y="34" width="24" height="4" fill="#7dd3fc" />
+    <rect x="26" y="42" width="8" height="4" fill="#facc15" />
+    <!-- Monitor Stand -->
+    <rect x="44" y="56" width="12" height="8" fill="#475569" />
+    <rect x="34" y="64" width="32" height="4" fill="#64748b" />
+
+    <!-- Pixel Desk -->
+    <rect x="4" y="68" width="104" height="6" fill="#475569" />
+    <rect x="4" y="74" width="104" height="4" fill="#1e293b" />
+
+    <!-- Pixel Coffee Mug + Animated Steam -->
+    <rect class="steam-1" x="92" y="44" width="4" height="4" fill="#e2e8f0" />
+    <rect class="steam-2" x="98" y="40" width="4" height="4" fill="#cbd5e1" />
+    <rect x="88" y="54" width="16" height="14" fill="#f8fafc" />
+    <rect x="104" y="58" width="4" height="6" fill="#cbd5e1" />
+    <rect x="90" y="54" width="12" height="3" fill="#78350f" />
+
+    <!-- Pixel Dev Keyboard -->
+    <rect x="26" y="62" width="48" height="4" fill="#94a3b8" />
+    <rect x="30" y="62" width="4" height="2" fill="#38bdf8" />
+    <rect x="38" y="62" width="4" height="2" fill="#c084fc" />
+    <rect x="46" y="62" width="4" height="2" fill="#34d399" />
+  </g>
+
+  <!-- Mini Caption Inside Pixel Card -->
+  <text x="753" y="198" text-anchor="middle" class="mono" font-size="10.5" fill="#e2e8f0">
+    LVL 26 · SYSTEM ARCHITECT
+  </text>
+  <!-- Pixel HP/XP Bar -->
+  <g transform="translate(693, 208)" shape-rendering="crispEdges">
+    <rect x="0" y="0" width="120" height="8" fill="#0f172a" />
+    <rect x="2" y="2" width="10" height="4" fill="#22d3ee" />
+    <rect x="14" y="2" width="10" height="4" fill="#22d3ee" />
+    <rect x="26" y="2" width="10" height="4" fill="#38bdf8" />
+    <rect x="38" y="2" width="10" height="4" fill="#38bdf8" />
+    <rect x="50" y="2" width="10" height="4" fill="#818cf8" />
+    <rect x="62" y="2" width="10" height="4" fill="#818cf8" />
+    <rect x="74" y="2" width="10" height="4" fill="#a855f7" />
+    <rect x="86" y="2" width="10" height="4" fill="#c084fc" />
+    <rect x="98" y="2" width="10" height="4" fill="#34d399" />
+    <rect x="110" y="2" width="8" height="4" fill="#1e293b" />
+  </g>
+</svg>
+
